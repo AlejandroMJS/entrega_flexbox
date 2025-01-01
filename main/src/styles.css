@@ -14,14 +14,24 @@
 
 body {
   background-color: var(--primary-color);
+  background-image: url(/main/assets/main-background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
 }
-
+.menu {
+  display: none;
+}
+main {
+  display: flex;
+  height: 600px;
+  background-color: white;
+}
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: url(/main/assets/main-background.png);
   height: 140px;
   background-size: cover;
   background-position: center;
@@ -111,21 +121,46 @@ nav a:hover {
 @media screen and (max-width: 1195px) {
   header {
     justify-content: space-evenly;
+    height: auto;
   }
   .logo {
     justify-self: center;
     align-self: center;
-    margin-top: 10px;
+    margin-top: 30px;
+  }
+  nav {
+    margin-bottom: 30px;
   }
 }
 
-@media screen and (max-width: 710) {
+@media screen and (max-width: 710px) {
+  header {
+    padding: 30px;
+  }
   .logo {
     justify-self: center;
     align-self: center;
     margin-top: 10px;
+    padding-left: 80px;
   }
-  header > nav {
+  nav {
     display: none;
+  }
+  .menu {
+    display: flex;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    margin: 20px;
+    margin-right: 100px;
+  }
+  .logo {
+    position: relative;
+  }
+}
+@media screen and (max-width: 400px) {
+  .logo {
+    height: 40px;
+    margin-right: 40px;
   }
 }
